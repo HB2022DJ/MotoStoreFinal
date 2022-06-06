@@ -1,0 +1,43 @@
+<div class="container mx-auto mt-4">
+    <div *ngIf="!marques" class="loader">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <a [routerLink]="['/marque/KTM']"><img src="assets/KTM.png" class="card-img-top" alt="..."></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <a [routerLink]="['/marque/Yamaha']"><img src="assets/yamaha.png" class="card-img-top" alt="..."></a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <a [routerLink]="['/marque/Harley Davidson']"><img src="http://assets.stickpng.com/images/580b585b2edbce24c47b2cfb.png" class="card-img-top" alt="..."></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <a [routerLink]="['/marque/Kawasaki']">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Kawasaki-logo.svg/2560px-Kawasaki-logo.svg.png"
+                class="card-img-top" alt="...">
+          </a> 
+        </div>
+      </div>
+    </div>

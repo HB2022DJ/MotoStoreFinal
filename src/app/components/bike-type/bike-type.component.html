@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row mt-5">
+      <div *ngIf="!types" class="loader">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5 mb-5">
+        <h1>CHOISIR LA MOTO PAR SON TYPE</h1>
+      </div>
+      <div *ngFor="let moto of types" >
+  <div>
+        <div [routerLink]="['/type/', moto]" class="mb-5 " style="width: 18rem;">        
+         
+            <p class=" text-center">{{moto}}</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div *ngIf="motos">
+      <div class="container">
+          <div class="row">
+              <div *ngFor="let moto of motos" class="d-flex justify-content-center" >
+              <div class="card mb-5 text-center" style="width: 18rem;">
+                  <img src="{{moto.image}}" class="card-img-top" alt="{{moto.image}}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{moto.nom}}</h5>
+                    <p class="card-text"><strong>prix: {{moto.prix}}€</strong></p>
+                    <a href="#" class="btn btn-primary">detail</a>
+                  </div>
+                </div>
+              </div>
+          </div>   
+      </div>
+    </div>

@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center">
+
+  
+    <div *ngFor="let moto of motos">
+      <div class="card mb-5 me-4 mt-5 text-center " style="width: 18rem;height: 22rem;">
+        <img src="{{moto.image}}" class="card-img-top" alt="{{moto.image}}">
+        <div class="card-body">
+          <h5 class="card-title">{{moto.nom}}</h5>
+          <p class="card-text"><strong>Tarif: {{moto.prix}}€</strong></p>
+          <a [routerLink]="['/details',moto.id]" class="btn btn-primary">Voir la moto</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="col-md-6">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <a [routerLink]="['/marque/Harley Davidson']"><img src="http://assets.stickpng.com/images/580b585b2edbce24c47b2cfb.png" class="card-img-top" alt="..."></a>
+      </div>
+    </div>
+  </div>

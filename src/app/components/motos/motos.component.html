@@ -1,0 +1,28 @@
+<br>
+<h4>Toutes nos Motos</h4>
+<br>
+<div class="container-fluid" *ngFor="let moto of motos">
+	<div class="row" id="ads">
+    <!-- Category Card -->
+    <div class="col-md-4">
+        <div class="card rounded">
+            <div class="card-image">
+                <span class="card-notify-badge">{{moto.type}}</span>
+                <span class="card-notify-year">{{moto.annee}}</span>
+                <img class="img-fluid" src="{{moto.image}}" alt="photo d'une moto" />
+            </div>
+            <div class="card-image-overlay m-auto">
+                <span class="card-detail-badge m-2"> Marque: {{moto.marque}}</span>
+                <span class="card-detail-badge m-2"> Prix: {{moto.prix}}€</span>
+                <span class="card-detail-badge m-2">{{moto.kilometres}}km</span>
+            </div>
+            <div class="card-body text-center">
+                <div class="ad-title m-auto">
+                    <h5>{{moto.nom}}</h5>
+                </div>
+                <a class="ad-btn" href="#">Détails</a>
+            </div>
+
+        </div>
+    </div>
+</div>

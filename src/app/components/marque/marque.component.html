@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+      <div *ngIf="!motos" class="loader">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div *ngFor="let moto of motos">
+          <div class="card mb-5 me-4 mt-5 text-center " style="width: 18rem;height: 22rem;">
+            <img src="{{moto.image}}" class="card-img-top" alt="{{moto.image}}">
+            <div class="card-body">
+              <h5 class="card-title">{{moto.nom}}</h5>
+              <p class="card-text"><strong>Prix: {{moto.prix}}€</strong></p>
+              <a [routerLink]="['/details',moto.id]" class="btn btn-primary">Voir la moto</a>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>   
+</div>
